@@ -8,14 +8,14 @@
     <base href="/">
 </head>
 <body>
-    
+
     <div data-ng-controller="appcontroller as con">
-        <input type="text" id="input" name="input">
+        <input style="width: 200px" type="text" id="input" name="input">
         <button ng-click="con.search()">Execute query</button>
-        
+
         <div ng-repeat="task in con.result">
             <p>{{task}}</p>
-        </div>       
+        </div>
     </div>
 
 
@@ -25,7 +25,7 @@
 
     <!-- App -->
 <script src="core/app.js"></script>
-   
+
 <script src="core/Services/DataService.js"></script>
 <script src="core/Controllers/appcontroller.js"></script>
     <script src="core/Others/router.js"></script>

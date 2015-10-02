@@ -1,6 +1,6 @@
 (function() {
     "use strict";
-    var baseUrl = "~arbj/ws-project/GetData.php";
+    var baseUrl = "/~arbj/ws-project/GetData.php";
     function dataservice($http, $q) {
         var service = this;
         service.Query = function(query) {

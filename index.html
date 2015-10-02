@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Scalability Web</title>
+    <base href="/">
+</head>
+<body>
+
+    <div data-ng-controller="appcontroller as con">
+        <input style="width: 200px" type="text" id="input" name="input">
+        <button ng-click="con.search()">Execute query</button>
+
+        <div ng-repeat="task in con.result">
+            <p>{{task}}</p>
+        </div>
+    </div>
+
+
+    <!-- Angular modules -->
+    <script src="~arbj/ws-project/lib/angular/angular.js"></script>
+    <script src="~arbj/ws-project/lib/angular-route/angular-route.js"></script>
+
+    <!-- App -->
+<script src="core/app.js"></script>
+
+<script src="~arbj/ws-project/core/Services/DataService.js"></script>
+<script src="~arbj/ws-project/core/Controllers/appcontroller.js"></script>
+    <script src="~arbj/ws-project/core/Others/router.js"></script>
+
+</body>
+</html>

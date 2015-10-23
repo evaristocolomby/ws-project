@@ -12,7 +12,7 @@ $logfile = 'log.log';
 //file_put_contents($logfile, '\n QUERY: ' . $query, FILE_APPEND | LOCK_EX);
 
 
-$conn_string = "host=localhost port=5432 dbname=arbj user=arbj password=3jNtvyfcR1";
+$conn_string = "";
 $conn = pg_connect($conn_string);
 
 if (!$conn) {
@@ -23,7 +23,7 @@ if (!$conn) {
 if ($get > 0 || $post > 0 || $cookie > 0){
   $data[] = 'SQL Attack attempt detected';
   $data[] = 'Aborting operation';
-  //var_dump($get); var_dump($post); var_dump($cookie);
+
 } else {
 preg_match('/(limit)\s\d(((\,\s)|(\s\,\s)|(\s\,))\d)?/i', $query, $matches);  //1
 
